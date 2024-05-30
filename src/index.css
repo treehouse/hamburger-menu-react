@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    overflow: hidden;
+}
+.ham-menu {
+    height: 50px;
+    width: 80px;
+    padding: .25rem;
+    position: relative;
+    cursor: pointer;
+}
+.ham-menu:hover span {
+    background-color: white;
+}
+
+.ham-menu span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5px;
+    width: 70%;
+    border-radius: 1rem;
+    background-color: rgb(197, 197, 197);
+    transition: .2s ease;
+}
+
+.ham-menu span:nth-child(1) {    
+    top: 25%;
+}
+.ham-menu span:nth-child(2) {    
+
+}
+.ham-menu span:nth-child(3) {    
+ top: 75%;
+}
+
+
+.ham-menu.active span {
+    background-color: white;
+}
+
+.ham-menu.active span:nth-child(1){
+    transform: translate(-50%, -50%) rotate(-45deg);
+    top: 50%;
+    width: 50%;
+}
+.ham-menu.active span:nth-child(2){
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3){
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%;
+    width: 50%;
+}
